@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For You ❤️</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Background Music -->
+<audio id="bgMusic" loop>
+  <source src="nastelbom-love-466198.mp3" type="audio/mpeg">
+</audio>
+
+<!-- HERO SECTION -->
+<section class="hero">
+  <!-- Blurred background image -->
+  <img src="Photos/Hero.jpeg" class="hero-blur" alt="background">
+
+  <!-- Clear main image -->
+  <img src="Photos/Hero.jpeg" class="hero-main" alt="main image">
+</section>
+
+
+<section class="text-marquee">
+  <div class="marquee-track text-track">
+    <span>💖 अक्षता तू माझ्यासाठी स्पेशल आहेस 💖</span>
+    <span>💍 तू कायमची माझी आहेस 💍</span>
+    <span>❤️ तू सोबत असलीस तर सगळं परफेक्ट आहे ❤️</span>
+
+    <!-- Duplicate -->
+    <span>💖 अक्षता तू माझ्यासाठी स्पेशल आहेस 💖</span>
+    <span>💍 तू कायमची माझी आहेस 💍</span>
+    <span>❤️ तू सोबत असलीस तर सगळं परफेक्ट आहे ❤️</span>
+  </div>
+</section>
+
+<section class="bond-section">
+  <h2 class="names">Nikunj ❤️ Akshata</h2>
+  <div class="line"></div>
+</section>
+
+
+<!-- MESSAGE -->
+ <section class="love-section">
+
+  <div class="love-text" data-aos="fade-right">
+    <p>
+      He apli First meet <br>
+       Jithe me tula bhagun pghalo ani jeva tula andher station la bhugitla💖
+      <br><br>
+      Theva me bola swatala hich te je mala sadayva majya life madhe havi<br>
+      Tu alis ani maje changle shan ale seriolsly akshata  🥺❤️
+      <br><br>
+      I don’t need perfect moments,<br>
+      mala fakt <b>tu sobat</b> havi
+    </p>
+  </div>
+
+  <div class="love-image" data-aos="fade-left">
+    <img src="Photos/First Meet.jpeg" alt="Love Image">
+  </div>
+
+</section>
+
+<section class="image-marquee">
+  <div class="marquee-track">
+    <img src="Photos/1.jpeg" alt="">
+    <img src="Photos/2.jpeg" alt="">
+    <img src="Photos/3.jpeg" alt="">
+    <img src="Photos/4.jpeg" alt="">
+
+    <!-- Duplicate for smooth loop -->
+    <img src="Photos/1.jpeg" alt="">
+    <img src="Photos/2.jpeg" alt="">
+    <img src="Photos/3.jpeg" alt="">
+    <img src="Photos/4.jpeg" alt="">
+  </div>
+</section>
+
+
+<section class="love-section">
+  
+  <div class="love-image" data-aos="fade-right">
+    <img src="Photos/WhatsApp Image 2026-02-13 at 8.43.12 PM (1).jpeg" alt="Love Image">
+  </div>
+
+  <div class="love-text" data-aos="fade-left">
+    <p>
+      Tu jevha mazya life madhe aali,<br>
+      Theva khup changes zale you are my Lucky Charm
+      <br><br>
+      Tuya hasnyat shanti aahe, Khara<br>
+      Shanti Konachi maji shanti khara tu jeva majya kade bhagun smile kartes me havet asto 🥺❤️
+      <br><br>
+      I Love You My Love❤️<br>
+     
+  </div>
+
+</section>
+
+
+
+<section class="image-marquee">
+  <div class="marquee-track">
+    <img src="Photos/WhatsApp Image 2026-02-13 at 8.43.12 PM.jpeg" alt="">
+    <img src="Photos/WhatsApp Image 2026-02-13 at 8.45.25 PM (1).jpeg" alt="">
+    <img src="Photos/WhatsApp Image 2026-02-13 at 8.45.25 PM (2).jpeg" alt="">
+    <img src="Photos/WhatsApp Image 2026-02-13 at 8.45.25 PM.jpeg" alt="">
+
+    <!-- Duplicate for smooth loop -->
+    <img src="Photos/Hero.jpeg" alt="">
+    <img src="Photos/WhatsApp Image 2026-02-13 at 8.43.12 PM.jpeg" alt="">
+    <img src="Photos/WhatsApp Image 2026-02-13 at 8.45.25 PM (2).jpeg" alt="">
+    <img src="Photos/WhatsApp Image 2026-02-13 at 8.45.25 PM.jpeg" alt="">
+  </div>
+</section>
+
+
+
+
+<!-- GAME 
+<section class="game">
+  <h2>Akshata, tu mazhi Valentine banashil ka? 💍</h2>
+  <div class="buttons">
+    <button onclick="yesClicked()">YES 💖</button>
+    <button id="noBtn">NO 😏</button>
+  </div>
+</section> -->
+
+<!-- FINAL 
+<section class="final" id="final">
+  <h1>Akshata, majha dil already tuzha aahe ❤️🥰</h1>
+  <p>
+    Forever grateful for your love,<br>
+    your patience and YOU 💕
+  </p>
+</section> -->
+
+<script src="script.js"></script>
+<script>
+const images = document.querySelectorAll(".hero-img");
+let current = 0;
+
+setInterval(() => {
+  images[current].classList.remove("active");
+  current = (current + 1) % images.length;
+  images[current].classList.add("active");
+}, 5000);
+</script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+</script>
+
+
+</body>
+</html>

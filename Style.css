@@ -1,0 +1,245 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom, #bb0a0a, #1c0802);
+  color: white;
+  text-align: center;
+  overflow-y: auto;   /* allow scrolling */
+}
+
+
+section {
+  padding: 60px 20px;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Blurred image (background) */
+.hero-blur {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(10px) brightness(0.8);
+  transform: scale(1.1); /* avoids edge blur gaps */
+}
+
+/* Main clear image */
+.hero-main {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;   /* keeps image clear */
+}
+
+
+/* MESSAGE */
+.love-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  padding: 40px 20px;
+}
+
+/* Make image smaller for mobile */
+.love-image img {
+  width: 220px;
+  max-width: 100%;
+  border-radius: 20px;
+}
+
+/* Text area */
+.love-text {
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 400px;
+}
+
+@media (max-width: 768px) {
+
+  .love-image img {
+    width: 140px;   /* smaller image */
+  }
+
+  .love-text {
+    font-size: 14px;
+  }
+
+}
+
+
+/* GAME */
+.game h2 {
+  font-size: 1.6rem;
+}
+
+.buttons button {
+  padding: 15px 30px;
+  font-size: 18px;
+  margin: 10px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+.buttons button:first-child {
+  background: #ff2e63;
+  color: white;
+}
+
+#noBtn {
+  background: white;
+  color: black;
+  position: relative;
+}
+
+/* FINAL */
+.final {
+  display: none;
+  animation: pop 1s ease-in-out;
+}
+
+
+@keyframes fadeUp {
+  from {opacity:0; transform:translateY(20px);}
+  to {opacity:1; transform:translateY(0);}
+}
+
+@keyframes pop {
+  0% {transform: scale(0);}
+  100% {transform: scale(1);}
+}
+
+/* New added---------------------------------------------------*/
+
+.heart {
+  position: fixed;
+  bottom: -10px;
+  font-size: 20px;
+  animation: floatUp 6s linear forwards;
+  opacity: 0.8;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-110vh) scale(1.5);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-main {
+    object-fit: cover;
+  }
+}
+/*-------------------------------------------------------------------------------------------------------IMAGE SECTION-----------*/
+.image-marquee {
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 0;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: scroll 25s linear infinite;
+}
+
+.marquee-track img {
+  height: 200px;
+  width: auto;
+  margin: 0 20px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Smooth Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* 📱 Mobile Optimization */
+@media (max-width: 768px) {
+  .marquee-track img {
+    height: 220px;
+    margin: 0 10px;
+  }
+}
+
+/*--------------------------------------------------------------------*/
+
+.text-marquee {
+  width: 100%;
+  overflow: hidden;
+  background: #7b0000;
+  padding: 15px 0;
+  white-space: nowrap;
+}
+
+.text-track {
+  display: inline-block;
+  animation: scrollText 18s linear infinite;
+}
+
+.text-track span {
+  font-size: 20px;
+  color: white;
+  margin-right: 60px;
+  font-weight: 500;
+}
+
+@keyframes scrollText {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@media (max-width: 768px) {
+  .text-track span {
+    font-size: 16px;
+    margin-right: 40px;
+  }
+}
+
+
+/*-----------------------------------------------------------------------------------------*/
+
+.names {
+  font-family: 'Great Vibes', cursive;
+  font-size: 40px;
+  letter-spacing: 2px;
+}
+
+
+.line {
+  width: 0;
+  height: 3px;
+  background: white;
+  margin: 20px auto;
+  animation: expand 2s forwards;
+}
+
+@keyframes expand {
+  to { width: 60%; }
+}
